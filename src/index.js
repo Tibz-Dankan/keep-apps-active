@@ -19,7 +19,7 @@ const keepActiveController = (app) => {
 
         res
           .status(200)
-          .json({ status: "success", message: `Hi from ${appName}` });
+          .json({ status: "success", message: `Hi from ${req.body.appName}` });
       } catch (error) {
         console.warn(error);
         res.status(500).json({ status: "fail", message: error.message });
